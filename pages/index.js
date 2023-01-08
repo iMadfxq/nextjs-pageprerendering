@@ -9,7 +9,19 @@ import styles from '../styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default async function getStaticProps() {
-  return props
+  return {
+    props: {
+      numbers: [1,2,3,4]
+    }
+  }
+}
+
+export default async function getStaticPaths() {
+  return {
+    paths: {
+      params: {pid: 1}
+    }
+  }
 }
 
 export default function Home() {
